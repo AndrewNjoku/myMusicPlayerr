@@ -1,0 +1,72 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+        android:elevation="3dp"
+        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="70dp"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/AlbumCover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                card_view:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/collectionTItle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/AlbumCover"
+                android:text="Title of the collection will be dispalyed here" />
+
+            <TextView
+                android:id="@+id/trackTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/artist_name"
+                android:layout_toEndOf="@+id/AlbumCover"
+                android:text="song will be displayed here" />
+
+            <TextView
+                android:id="@+id/trackPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/trackTitle"
+                android:layout_alignBottom="@+id/trackTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/artist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/collectionTItle"
+                android:layout_toRightOf="@+id/AlbumCover"
+                android:text="TextView" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
